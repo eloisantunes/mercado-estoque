@@ -10,6 +10,7 @@ export class AuthService {
   constructor(private router: Router) {}
 
   login(username: string, password: string): boolean {
+    // Simulação de autenticação (substitua por uma chamada à API)
     if (username === 'admin' && password === 'admin') {
       this.isAuthenticated = true;
       return true;

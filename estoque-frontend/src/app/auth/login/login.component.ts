@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { FormsModule } from '@angular/forms'; // Para usar [(ngModel)]
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
+  standalone: true, // Marca o componente como standalone
+  imports: [CommonModule, FormsModule], // Importa os módulos necessários
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
@@ -15,7 +19,7 @@ export class LoginComponent {
 
   onSubmit(): void {
     if (this.authService.login(this.username, this.password)) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home']); // Redireciona para a página inicial
     } else {
       alert('Usuário ou senha incorretos!');
     }
