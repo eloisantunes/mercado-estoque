@@ -1,9 +1,27 @@
-.icon{
-    width: 30px;
-    height: 30px;
-    margin: 20px;
-    color: #008000;
+.home-container{
+    padding: 20px;
 }
+
+header{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.icon{
+    width: 20%;
+    height: 30px;
+    background-color: rgb(41, 211, 78);
+    color: #008000;
+    margin-top: -1%;
+}
+.name {
+    color: #161616;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-left: -15%;
+    margin-top: -1%;
+  }
 
 button[mat-raised-button] {
     width: 60px;
